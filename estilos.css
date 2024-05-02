@@ -29,8 +29,6 @@ header {
     align-items: center;
     justify-content: center;
     height: auto;/*100vh;*/
-}
-*/
 .header_none {
     display: flex;
     width: 100%;
@@ -259,9 +257,7 @@ nav ul li:hover {
       
   }
   
-  #contactus {
-  }
-  
+ 
   #contactus h3 {
     display: block;
     font-size: 30px;
