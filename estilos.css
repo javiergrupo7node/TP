@@ -1,4 +1,5 @@
 
+	
 			
 header {
   display: flex;
@@ -139,7 +140,7 @@ nav ul li:hover {
                 position: relative;
                 overflow: hidden;
                 width: 100%;
-                height: calc( 300px + 3em);
+                height: calc( 370px + 3em);
             }
             .slide-open:checked + .slide-item {
                 position: static;
@@ -238,8 +239,6 @@ nav ul li:hover {
 
 /* CONTACTO*/
 
-
-
 .container {
     max-width: 400px;
     width: 100%;
@@ -248,7 +247,7 @@ nav ul li:hover {
   }
   
   #contactus {
-    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+    font: 400 12px/16px Helvetica, Arial, sans-serif;
       background: #F9F9F9;
     padding: 25px;
     margin: 150px 0;
@@ -352,4 +351,89 @@ nav ul li:hover {
   :-ms-input-placeholder {
     color: #888;
   }
+  
+  
+  
+  
+  /* RESERVA*/
+  
+  
+  form {
+	  font-family: Helvetica;
+  /* Just to center the form on the page */
+  margin: 0 auto;
+  width: 400px;
+  /* To see the limits of the form */
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+div + div {
+  margin-top: 1em;
+}
+label {
+  /* To make sure that all label have the same size and are properly align */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+input,
+textarea {
+  /* To make sure that all text field have the same font settings
+     By default, textarea are set with a monospace font */
+  font: 1em verdana;
+  /* To give the same size to all text field */
+  width: 300px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* To harmonize the look & feel of text field border */
+  border: 1px solid #999;
+}
+input:focus,
+textarea:focus {
+  /* To give a little highlight on active elements */
+  border-color: #000;
+}
+textarea {
+  /* To properly align multiline text field with their label */
+  vertical-align: top;
+  /* To give enough room to type some text */
+  height: 5em;
+  /* To allow users to resize any textarea vertically
+     It works only on Chrome, Firefox and Safari */
+  resize: vertical;
+}
+.button {
+  /* To position the buttons to the same position of the text fields */
+  padding-left: 90px; /* same size as the label elements */
+}
+button {
+  /* This extra margin represent the same space as the space between
+     the labels and their text fields */
+  margin-left: 0.5em;
+}
+h3 {
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  
+    #formReserva {
+    font: 400 12px/16px Helvetica, Arial, sans-serif;
+      background: #F9F9F9;
+    /*padding: 25px;
+    margin: 150px 0;*/
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  #botonReserva[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #f0715f;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+}
   
