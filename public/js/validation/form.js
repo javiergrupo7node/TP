@@ -23,6 +23,7 @@ form.addEventListener("submit", function (e) {
     {
         form.submit()
     }
+    
     if (name.length == 0) {
         alert("nombre no puede estar vacio");
     } else if (name.length >= 20) {
