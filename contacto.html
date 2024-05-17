@@ -3,9 +3,10 @@
 <head>
 	<link rel="STYLESHEET" href="./estilos.css">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+  <script src="/public/js/validation/contact.js" async></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
 </head>
 <body>
 
@@ -15,7 +16,7 @@
                   <li><a href="index.html">Inicio</a></li>
                   <li><a href="menu.html">Menu</a></li>
                   <li><a href="reservas.html">Reservas</a></li>
-                  <li><a href="contacto.html">Contacto</a></li>
+                  <li><a href="contact-formo.html">Contacto</a></li>
 
          </ul>
         </nav>
@@ -25,23 +26,23 @@
 
 	<div class="container">  
 	
-		<form id="contactus" action="" method="post">
+		<form id="contact-form" action="" method="post">
 		  <h3>Contáctenos</h3>
 		  
 		  <fieldset>
-			<input placeholder="nombre" type="text" tabindex="1" required autofocus>
+			<input placeholder="nombre" type="text" tabindex="1" name="user_name" autofocus>
 		  </fieldset>
 		  <fieldset>
-			<input placeholder="correo electrónico" type="email" tabindex="2" required>
+			<input placeholder="correo electrónico" type="text" tabindex="2" name="user_email">
 		  </fieldset>
 		  <fieldset>
-			<input placeholder="número de teléfono" type="tel" tabindex="3" required>
+			<input placeholder="número de teléfono" type="tel" tabindex="3" name="user_tel">
 		  </fieldset>
 		  <fieldset>
-			<textarea placeholder="escriba su mensje aquí..." tabindex="5" required></textarea>
+			<textarea placeholder="escriba su mensaje aquí..." tabindex="5" name="user_textarea"></textarea>
 		  </fieldset>
 		  <fieldset>
-			<button name="submit" type="submit" id="xcontactus-submit" data-submit="...Sending">Enviar</button>
+			<button name="submit" type="submit" id="xcontact-form-submit" data-submit="...Sending">Enviar</button>
 		  </fieldset>
 		
 		</form>
@@ -55,7 +56,7 @@
                   <li><a href="index.html">Inicio</a></li>
                   <li><a href="menu.html">Menu</a></li>
                   <li><a href="reservas.html">Reservas</a></li>
-                  <li><a href="contacto.html">Contacto</a></li>
+                  <li><a href="contact-formo.html">contact-formo</a></li>
          </ul>
         </nav>
     </header>
