@@ -4,23 +4,28 @@ class Validator {
         this._result = alerted ? new ResultAlert() : new Result();
     }
 
-    isGreater(length, mess) {
-        return this._result.save(this, this.val.length > length, mess);
+    isGreater(length, mess, val = this.val) {
+        return this._result.save(this, val > length, mess);
     }
 
-    isLess(length, mess) {
-        return this._result.save(this, this.val.length < length, mess);
+    isLess(length, mess, val = this.val) {
+        return this._result.save(this, val < length, mess);
     }
 
-    isEqual(length, mess) {
-        return this._result.save(this, this.val.length === length, mess);
+    isEqual(length, mess, val = this.val) {
+        return this._result.save(this, val === length, mess);
     }
 
-    isMatch(pattern, mess) {
-        return this._result.save(this, pattern.test(this.val), mess)
+    isMatch(pattern, mess, val = this.val) {
+        return this._result.save(this, pattern.test(val), mess);
     }
 
-    isNotEmpty(mess) {
-        return this._result.save(this, this.val.length > 0, mess)
+    isNotEmpty(mess, val = this.val) {
+        return this._result.save(this, val > 0, mess);
+    }
+
+    isNotNaN(mess, val = this.val) {
+        console.log(isNaN(val));
+        return this._result.save(this, !isNaN(val), mess);
     }
 };
