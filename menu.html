@@ -2,13 +2,14 @@
 <html lang="es">
    <head>
       <link rel="stylesheet" href="public/css/estilos.css">
+      <script src="data.js" async></script>
       <title>Menu</title>
    </head>
    <body class="background">
       <header>
          <nav>
             <ul>
-				   <li><a href="index.html" class="nav-a"><img class="fa" src="public/images/nostracucina-high-resolution-logo.png" alt="logo"></a></li>
+               <li><a href="index.html" class="nav-a"><img class="fa" src="public/images/nostracucina-high-resolution-logo.png" alt="logo"></a></li>
                <li><a class="nav-a nav-a-text" href="index.html">Inicio</a></li>
                <li><a class="nav-a nav-a-text" href="menu.html">Menu</a></li>
                <li><a class="nav-a nav-a-text" href="reservas.html">Reservas</a></li>
@@ -17,20 +18,23 @@
          </nav>
       </header>
 
-      <div class="grid-container">
-         <div class="grid-item">
-            <img class="imagen_menu"  alt="imagen1" width="450" height="350" src="https://saborargento.com.ar/wp-content/uploads/2023/06/Receta-de-Milanesa-con-Pure.webp">
-            <p><span class="strong" >Milanesa con puré </span>$3500.00</p>
+      <div class="container-menu">
+         <div class="left-menu">
+            <nav class="nav-menu">
+               <img class="logo-menu" src="public/images/nostracucina-high-resolution-logo.png" alt="logo">
+               <h2>Menu</h2>
+               <ul>
+                  <li id="drink"><a class="nav-a-text-menu">Drinks</a></li>
+                  <li id="meat"><a class="nav-a-text-menu">meats</a></li>
+               </ul>
+            </nav>
          </div>
-         <div class="grid-item">
-            <img class="imagen_menu"  alt="imagen2"  width="450" height="350" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtI6F5xEQuOOX_9qhtfivuKjQ4Zl_ahBwpRulZJBqxxicezWrZYXdvuIxxFS3CeeyubSN82zDh5yxyNOB7ROMLGK1MDnUfE48NQHAdXtYfwYvmr5fjztOfjfAa1aN5wGbHC1x4M9aSPm46_c3qWSBQLbWIxKEcxeSR3cg7SgbYP3dlbPITLZ-BCphw/s1600/milanesa-con-papas-fritas.webp">
-            <p><span class="strong" >Milanesa con fritas </span>$4000.00</p>
-         </div>
-         <div class="grid-item">
-            <img class="imagen_menu"  alt="imagen3" width="450" height="350" src="https://www.recetasderechupete.com/wp-content/uploads/2022/03/Merluza-a-la-romana-con-patatas-1200x828.jpg">
-            <p><span class="strong" >Merluza a la romana con fritas </span>$4200.00</p>
+   
+         <div class="right-menu">
+            <div class="grid-container"></div>
          </div>
       </div>
+
       <footer>
          <section>
             <div>
@@ -41,8 +45,8 @@
                </P>
             </div>
             <P>
-               Medois de pago 
-               efectuvo 
+               Metodos de pago 
+               efectivo 
                tarjeta de credito 
                tarjeta de debito 
                mercado pago 

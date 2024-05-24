@@ -1,3 +1,10 @@
+:root {
+	--primary: #000000;
+	--secondary: #ffffff;
+	--tertiary: #DC5F00;
+	--quaternary: #EEEEEE;
+}
+
 body {
 	margin: 0;
 }
@@ -6,7 +13,7 @@ header {
 	display: flex;
 	/* padding: 10px; */
 	/* padding-left: 2em; */
-	background: grey;
+	background: var(--tertiary);
 	width: 100%;
 	position: fixed;
 	/*padding: 10px;*/
@@ -19,7 +26,7 @@ header ul{
 }
 
 .nav-a:hover {
-	background-color: gray;
+	background-color: var(--tertiary);
 	text-decoration: underline;
 }
 
@@ -30,7 +37,7 @@ header ul{
 
 h3,
 label {
-	color: gray;
+	color: var(--primary);
 }
 
 .contenedor-imagenes {
@@ -60,7 +67,7 @@ label {
 	justify-content: space-between;
 	align-items: center;
 	background-color: #333;
-	color: #fff;
+	color: var(--primary);
 	padding: 10px;
 	padding-left: 2em;
 }
@@ -115,37 +122,32 @@ height: auto;
 */
 
 .imagen_menu {
-	max-width: 30%;
-	height: auto;
-	margin: 20px;
-	padding: 5px;
-	display: inline-block;
-	/*margin: auto;*/
+	max-width: 20%;
 }
 
-nav {
+header > nav {
 	float: right-side;
 }
 
-nav ul {
+header > nav ul {
 	list-style: none;
 	overflow: hidden;
 }
 
-nav ul li {
+header > nav ul li {
 	float: left;
 	font-family: Arial, sans-serif;
 	font-size: 16px;
 }
 
-nav ul li a {
+header > nav ul li a {
 	display: block;
 	padding: 10px;
-	color: #fff;
+	color: var(--primary);
 	text-decoration: none;
 }
 
-nav ul li:hover {
+header > nav ul li:hover {
 	background: #8F9ACD;
 }
 
@@ -156,13 +158,12 @@ nav ul li:hover {
 	display: grid;
 	grid-template-columns: auto;
 	/*background-color: #2196F3;*/
-	padding: 10px;
+	padding-top: 80px;
 }
 
 .grid-item {
 	/*background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);*/
-	padding: 20px;
 	font-size: 30px;
 	text-align: center;
 }
@@ -360,7 +361,7 @@ fieldset {
 	cursor: pointer;
 	width: 100%;
 	border: none;
-	background: #f0715f;
+	background: var(--tertiary);
 	color: #FFF;
 	margin: 0 0 5px;
 	padding: 10px;
@@ -495,7 +496,12 @@ h3 {
 footer {
 	text-align: center;
 	text-shadow: 2px 2px 17px rgba(0, 0, 0, 1);
-	font-size: 20px;
+	font-size: 16px;
+	margin-top: 26px;
+}
+
+footer > section > div > p, footer > section > p{
+	margin: 0;
 }
 
 .background {
@@ -510,4 +516,86 @@ footer {
 .fa {
   width: 50px;
   height: 50px;
+}
+
+
+
+
+
+/* menu */
+
+
+
+
+
+.container-menu {
+	display: flex;
+	justify-content: space-between;
+}
+
+.left-menu {
+	position: relative;
+	background-color: var(--quaternary);
+	width: 20%;
+}
+
+.logo-menu {
+	position: relative;
+	width: 80%;
+	align-self: center;
+}
+
+.nav-menu {
+	padding-top: 90px;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+.nav-menu > h2 {
+	margin-top: 40px;
+}
+
+.nav-menu > h2 {
+	font-size: 2.5em;
+	position: relative;
+	color: var(--primary);
+	margin-left: 20px;
+	margin-bottom: 0;
+}
+
+.nav-menu > ul {
+	margin: 5px;
+	font-size: 1.5em;
+	margin-left: 41px;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	color: var(--primary);
+	width: min-content;
+}
+
+.nav-menu > ul > li:hover {
+	color: var(--tertiary);
+	cursor: pointer;
+}
+
+.nav-menu > ul > li:active {
+	color: var(--primary);
+	transform: scale(0.9)
+}
+
+.right-menu {
+	position: relative;
+	background-color: var(--quaternary);
+	width: 79%;
+	height: 90vh;
+}
+
+.right-menu > .grid-container {
+	display: flex;
+	flex-direction: column;
+	height: 80vh;
+	overflow: hidden;
+	overflow-y: scroll;
 }
