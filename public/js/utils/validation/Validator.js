@@ -25,7 +25,6 @@ class Validator {
     }
 
     isNotNaN(mess, val = this.val) {
-        console.log(isNaN(val));
         return this._result.save(this, !isNaN(val), mess);
     }
 };

@@ -1,16 +1,17 @@
-
-	
-			
 header {
   display: flex;
-   padding: 10px;
-    padding-left:2em;
+  padding: 10px;
+  padding-left:2em;
   background: grey;
   width: 100%;
   position: fixed;
   /*padding: 10px;*/
   z-index: 100;
   margin-top:-21px;
+}
+
+h3, label{
+  color: gray;
 }
 
 .contenedor-imagenes {
@@ -437,3 +438,15 @@ h3 {
     font-size: 15px;
 }
   
+footer {
+  text-align: center;
+}
+
+.background {
+  background-image: url('public/images/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  color: #fff;
+}

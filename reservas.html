@@ -1,63 +1,78 @@
 <!doctype html>
 <html lang="es">
-    <head>
-      	<link rel="STYLESHEET" href="./estilos.css">
-			<script src="public/js/utils/validation/reserve.js" async></script>
-			<script src="public/js/utils/validation/Validator.js" async></script>
-			<script src="public/js/utils/validation/Result.js" async></script>
-			<script src="public/js/utils/validation/ResultAlert.js" async></script>
-		<title>Reservas </title>
-    </head>
-    <body>
+<head>
+	<link rel="STYLESHEET" href="./estilos.css">
+		<script src="public/js/utils/validation/reserve.js" async></script>
+		<script src="public/js/utils/validation/Validator.js" async></script>
+		<script src="public/js/utils/validation/Result.js" async></script>
+		<script src="public/js/utils/validation/ResultAlert.js" async></script>
+	<title>Reservas </title>
+</head>
+	<body class="background">
 		<header>
 			<nav>
 				<ul>
-					  <li><a href="index.html">Inicio</a></li>
-					  <li><a href="menu.html">Menu</a></li>
-					  <li><a href="reservas.html">Reservas</a></li>
-					  <li><a href="contacto.html">Contacto</a></li>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="reservas.html">Reservas</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
 				</ul>
 			</nav>
 		</header>
 	<br><br><br><br><br><br>
-	
+		
 	<form action="" method="" id="reserve-form" >
-	<div class="container">  
-	  <div>
-		<h3>Las reservas son en el dia</h3>
-	  </div>
-	  <div>
-		<label for="name">Nombre:</label>
-		<input type="text" id="name" name="user_name" >
-	  </div>
-	  <div>
-		<label for="telefono">Telefono:</label>
-		<input type="text" id="telefono" name="user_tel" >
-	  </div>
-  	  <div>
-		<label for="comensales">Cantidad Comensales:</label>
-		<input type="text" id="comensales" name="user_comensales" >
-	  </div>
-  	  <div>
-		<label for="select">Hora:</label>
-			<select id="select">
-			  <option value="value1">20:00</option>
-			  <option value="value2" selected>20:30</option>
-			  <option value="value3">21:00</option>
-			</select>
-	  </div>
-	  <div>
-		<label for="msg">Mensaje adicional:</label>
-		<textarea id="msg" name="user_message"></textarea>
-	  </div>
-	  <div class="button">
-		<button type="submit" id="botonReserva">Envia tu mensaje</button>
-	  </div>
-	</div>
-</form>
-
-	
-	
-	
-   </body>
+		<div class="container">  
+		<div>
+			<h3>Las reservas son en el dia</h3>
+		</div>
+		<div>
+			<label for="name">Nombre:</label>
+			<input type="text" id="name" name="user_name" >
+		</div>
+		<div>
+			<label for="telefono">Telefono:</label>
+			<input type="text" id="telefono" name="user_tel" >
+		</div>
+		<div>
+			<label for="comensales">Cantidad Comensales:</label>
+			<input type="text" id="comensales" name="user_comensales" >
+		</div>
+		<div>
+			<label for="select">Hora:</label>
+				<select id="select">
+				<option value="value1">20:00</option>
+				<option value="value2" selected>20:30</option>
+				<option value="value3">21:00</option>
+				</select>
+		</div>
+		<div>
+			<label for="msg">Mensaje adicional:</label>
+			<textarea id="msg" name="user_message"></textarea>
+		</div>
+		<div class="button">
+			<button type="submit" id="botonReserva">Envia tu mensaje</button>
+		</div>
+		</div>
+	</form>
+	<footer>
+		<section>
+		<div>
+			<P>
+			Calle falsa 123
+			tel: 4123-4123
+		whatsapp: 1515-506-506
+			</P> 
+		</div>
+		<P>
+		Medois de pago 
+		efectuvo 
+		tarjeta de credito 
+		tarjeta de debito 
+		mercado pago 
+		transferencias
+		</P>
+		</section>
+	</footer>
+	</body>
 </html>

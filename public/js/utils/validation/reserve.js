@@ -13,7 +13,7 @@ form.addEventListener("submit", function (e) {
             .isNotEmpty("nombre no puede estar vacio", name.length)
             .isLess(21, "nombre debe ser menor a 20 caracterers \n total:" + name.length, name.length)
             .isMatch(letters, "nombre solo debe contener letras");
-    
+            
         new Validator(tel.length, true)
             .isNotEmpty("teléfono no puede estar vacio")
             .isEqual(10, "teléfono debe ser 10 caracteres de largo \n total:" + tel.length)
@@ -23,11 +23,11 @@ form.addEventListener("submit", function (e) {
             .isNotEmpty("comensales no puede estar vacio", commensal.length)
             .isNotNaN("comensales debe ser un valor entero")
             .isLess(99, "comensales debe ser menor a 99")
-            .isMatch(/^[0-9]+$/, "comensales solo debe contener números");
-
+            .isMatch(/^[0-9]+$/, "comensales solo debe contener números", commensal);
+   
     } catch (error) {
         return e.preventDefault();
     }
 
     form.submit();
-})
+});
