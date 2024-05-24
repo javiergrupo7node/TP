@@ -1,72 +1,68 @@
 <!doctype html>
 <html lang="en">
-<head>
-	<link rel="STYLESHEET" href="./estilos.css">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="public/js/utils/validation/contact.js" async></script>
-	<script src="public/js/utils/validation/Validator.js" async></script>
-	<script src="public/js/utils/validation/Result.js" async></script>
-	<script src="public/js/utils/validation/ResultAlert.js" async></script>
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" >
-    <title>Contacto</title>
-</head>
-<body class="background">
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="reservas.html">Reservas</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header> 
-	
-	<br><br>
-	<div class="container">  
-	
-		<form id="contact-form" action="" method="">
-		  <h3  class="animate__bounceIn">Contáctenos</h3>
-		  
-		  <fieldset>
-			  <input placeholder="nombre" type="text" tabindex="1" name="user_name" autofocus>
-		  </fieldset>
-		  <fieldset>
-			  <input placeholder="correo electrónico" type="text" tabindex="2" name="user_email">
-		  </fieldset>
-		  <fieldset>
-			  <input placeholder="número de teléfono" type="tel" tabindex="3" name="user_tel">
-		  </fieldset>
-		  <fieldset>
-			  <textarea placeholder="escriba su mensaje aquí..." tabindex="5" name="user_textarea"></textarea>
-		  </fieldset>
-		  <fieldset>
-			  <button name="submit" type="submit" id="xcontact-form-submit" data-submit="...Sending">Enviar</button>
-		  </fieldset>
-      <div> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5522.674778399021!2d-58.3726161241659!3d-34.6091662168996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3352cdca17aad%3A0xb76fe46c571f5363!2sAv.%20Rivadavia%20100%2C%20C1002AAN%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1716335666059!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </div>
-
-		</form>
-	  </div>
-	  <footer>
-		<section>
-		 <div>
-			 <P>
-			 Calle falsa 123
-			 tel: 4123-4123
-		  whatsapp: 1515-506-506
-			 </P> 
-		</div>
-		  <P>
-		  Medois de pago 
-		   efectuvo 
-		   tarjeta de credito 
-		   tarjeta de debito 
-		   mercado pago 
-		   transferencias
-		  </P>
-		</section>
-	 </footer>
-	</body>
+   <head>
+      <link rel="stylesheet" href="public/css/estilos.css">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script src="public/js/utils/validation/contact.js" async></script>
+      <script src="public/js/utils/validation/Validator.js" async></script>
+      <script src="public/js/utils/validation/Result.js" async></script>
+      <script src="public/js/utils/validation/ResultAlert.js" async></script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" >
+      <title>Contacto</title>
+   </head>
+   <body class="background">
+      <header>
+         <nav>
+            <ul>
+               <li><a href="index.html" class="nav-a"><img class="fa" src="public/images/nostracucina-high-resolution-logo.png" alt="logo"></a></li>
+               <li><a class="nav-a nav-a-text" href="index.html">Inicio</a></li>
+               <li><a class="nav-a nav-a-text" href="menu.html">Menu</a></li>
+               <li><a class="nav-a nav-a-text" href="reservas.html">Reservas</a></li>
+               <li><a class="nav-a nav-a-text" href="contacto.html">Contacto</a></li>
+            </ul>
+         </nav>
+      </header>
+      <div class="container">
+         <form id="contact-form" action="" method="">
+            <h3  class="animate__bounceIn">Contáctenos</h3>
+            <fieldset>
+               <input placeholder="nombre" type="text" tabindex="1" name="user_name" autofocus>
+            </fieldset>
+            <fieldset>
+               <input placeholder="correo electrónico" type="text" tabindex="2" name="user_email">
+            </fieldset>
+            <fieldset>
+               <input placeholder="número de teléfono" type="tel" tabindex="3" name="user_tel">
+            </fieldset>
+            <fieldset>
+               <textarea placeholder="escriba su mensaje aquí..." tabindex="5" name="user_textarea"></textarea>
+            </fieldset>
+            <fieldset>
+               <button name="submit" type="submit" id="xcontact-form-submit" data-submit="...Sending">Enviar</button>
+            </fieldset>
+            <div> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5522.674778399021!2d-58.3726161241659!3d-34.6091662168996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3352cdca17aad%3A0xb76fe46c571f5363!2sAv.%20Rivadavia%20100%2C%20C1002AAN%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1716335666059!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </div>
+         </form>
+      </div>
+      <footer>
+         <section>
+            <div>
+               <P>
+                  Calle falsa 123
+                  tel: 4123-4123
+                  whatsapp: 1515-506-506
+               </P>
+            </div>
+            <P>
+               Medois de pago 
+               efectuvo 
+               tarjeta de credito 
+               tarjeta de debito 
+               mercado pago 
+               transferencias
+            </P>
+         </section>
+      </footer>
+   </body>
 </html>
