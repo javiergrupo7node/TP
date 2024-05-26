@@ -168,28 +168,32 @@ let navbarMenuCreator = (navbarMenu, obj) => {
     navbarMenu.append(li);
 };
 
-Object.keys(menu).forEach((menus) => {
-    navbarMenuCreator(ulMenu1, menus);
-});
+const remover = (...els) => { els.forEach((el) => {while (el.firstChild) el.firstChild.remove()}); }
 
 Object.keys(menu).forEach((menus) => {
-    menuItemEl = document.querySelector(`#${menus}`);
+
+    navbarMenuCreator(ulMenu1, menus);
+    let menuItemEl = document.querySelector(`#${menus}`);
     menuItemEl.addEventListener("click", () => {
-        while (gridContainer.firstChild) gridContainer.firstChild.remove()
-        while (ulMenu2.firstChild) ulMenu2.firstChild.remove()
-        while (ulMenu3.firstChild) ulMenu3.firstChild.remove()
+
+        remover(gridContainer, ulMenu2, ulMenu3);
+
         Object.keys(menu[`${menus}`]).forEach((m) => {
             navbarMenuCreator(ulMenu2, m);
-            mItemEl = document.querySelector(`#${m}`);
+            let mItemEl = document.querySelector(`#${m}`);
             mItemEl.addEventListener("click", () => {
-                while (ulMenu3.firstChild) ulMenu3.firstChild.remove()
-                
+
+                remover(ulMenu3);
+
                 Object.keys(menu[`${menus}`][`${m}`]).forEach((mItem) => {
+
                     navbarMenuCreator(ulMenu3, mItem);
                     let mmItemEl = document.querySelector(`#${mItem}`);
                     mmItemEl.addEventListener("click", () => {
+
                         menu[`${menus}`][`${m}`][`${mItem}`].forEach((item) => {
-                            while (gridContainer.firstChild) gridContainer.firstChild.remove()
+                            
+                            remover(gridContainer);
                             gridItemCreator(item);
                         });
                     });
