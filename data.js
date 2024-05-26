@@ -1,7 +1,9 @@
 const body = document.querySelector("body");
 const gridContainer = document.querySelector(".grid-container");
-const drinkBtn = document.getElementById("drink");
-const meatBtn = document.getElementById("meat");
+const navbarMenu = document.querySelector(".navbar-menu");
+const ulMenu1 = document.querySelector(".ul-menu-1");
+const ulMenu2 = document.querySelector(".ul-menu-2");
+const ulMenu3 = document.querySelector(".ul-menu-3");
 
 let menu = {
     drink: {
@@ -13,7 +15,7 @@ let menu = {
                         type: "Lt",
                         number: 1.5
                     },
-                    image: "public/images/products/drinks/drinks/drink/water/mineral/Agua Mineral Villavicencio 1,5L.jpeg",
+                    image: "public/images/products/drinks/drinks/drink/water/mineral/Agua Mineral Villavicencio 1,5L.png",
                     description: "El agua mineral Villavicencio es única de reserva protegida. La estrategia de la marca pone foco en proteger el recurso hidráulico, reducir su uso, contribuyendo a restaurar su ciclo.",
                     price: {
                         currency: "ARS",
@@ -45,7 +47,7 @@ let menu = {
                         type: "ml",
                         number: 750
                     },
-                    image: "public/images/products/drinks/drinks/drink/wine/red/MALBEC ARGENTINO.webp",
+                    image: "public/images/products/drinks/drinks/drink/wine/red/MALBEC ARGENTINO.png",
                     description: "Catena Zapata, una histórica bodega familiar fundada en 1902, está actualmente dirigida por los viticultores de tercera y cuarta generación Nicolás y su hija Laura Catena. Nicolás Catena Zapata es conocido como el hombre que revolucionó el vino argentino en los años 80, al centrarse principalmente en la calidad, Plantando viñedos a 1500 metros de altura y liderando el reingreso del Malbec –varietal francés casi olvidado por el resto del mundo– al mundo del vino, Catena Zapata y Nicolás Catena Zapata han recibido numerosos premios, entre ellos Decanter. Hombre del Año de la revista Decanter, Premio al Servicio Distinguido de The Wine Spectator y Bodega del Año de publicaciones de todo el mundo.",
                     price: {
                         currency: "ARS",
@@ -99,6 +101,9 @@ let menu = {
                 }
             }
         ]
+    },
+    dessert: {
+
     }
 };
 
@@ -136,23 +141,60 @@ const gridItemCreator = (obj) => {
     gridItem.append(box_3);
     box_3.append(p_description);
     gridContainer.append(gridItem);
-    
 };
 
-drinkBtn.addEventListener("click", (e) => {
-    while (gridContainer.firstChild) gridContainer.firstChild.remove()
-  
-    menu.drink.water.mineral.forEach((m) => { gridItemCreator(m); });
-    menu.drink.wine.blend.forEach((b) => { gridItemCreator(b); });
-    menu.drink.wine.red.forEach((r) => { gridItemCreator(r); });
+let translator = {
+    "drink": "Bebidas",
+    "meat": "Carne",
+    "dessert": "Postres",
+
+    "water": "Agua",
+    "wine": "Vino",
+    "steak": "Bife",
+    "seafood": "Mariscos",
+
+    "mineral": "mineral",
+    "blend": "Blend",
+    "red": "Tinto"
+}
+
+let navbarMenuCreator = (navbarMenu, obj) => {
+    const li = document.createElement("li");
+    li.setAttribute('id', obj);
+    const a = document.createElement("a");
+    a.setAttribute("class", "nav-a-text-menu");
+    a.innerHTML = translator[obj];
+    li.append(a);
+    navbarMenu.append(li);
+};
+
+Object.keys(menu).forEach((menus) => {
+    navbarMenuCreator(ulMenu1, menus);
 });
 
-meatBtn.addEventListener("click", (e) => {
-    while (gridContainer.firstChild) gridContainer.firstChild.remove()
-    menu.meat.steak.forEach((sk) => { gridItemCreator(sk); });
-    menu.meat.seafood.forEach((sf) => { gridItemCreator(sf); });
-});
-
-gridContainer.addEventListener("scroll", (e) => {
-    console.log(window.innerHeight);
+Object.keys(menu).forEach((menus) => {
+    menuItemEl = document.querySelector(`#${menus}`);
+    menuItemEl.addEventListener("click", () => {
+        while (gridContainer.firstChild) gridContainer.firstChild.remove()
+        while (ulMenu2.firstChild) ulMenu2.firstChild.remove()
+        while (ulMenu3.firstChild) ulMenu3.firstChild.remove()
+        Object.keys(menu[`${menus}`]).forEach((m) => {
+            navbarMenuCreator(ulMenu2, m);
+            mItemEl = document.querySelector(`#${m}`);
+            mItemEl.addEventListener("click", () => {
+                while (ulMenu3.firstChild) ulMenu3.firstChild.remove()
+                
+                Object.keys(menu[`${menus}`][`${m}`]).forEach((mItem) => {
+                    navbarMenuCreator(ulMenu3, mItem);
+                    let mmItemEl = document.querySelector(`#${mItem}`);
+                    mmItemEl.addEventListener("click", () => {
+                        menu[`${menus}`][`${m}`][`${mItem}`].forEach((item) => {
+                            while (gridContainer.firstChild) gridContainer.firstChild.remove()
+                            gridItemCreator(item);
+                        });
+                    });
+                });
+            });
+        });
+    });
 });

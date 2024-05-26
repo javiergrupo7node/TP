@@ -564,26 +564,7 @@ footer > section > div > p, footer > section > p{
 	margin-bottom: 0;
 }
 
-.nav-menu > ul {
-	margin: 5px;
-	font-size: 1.5em;
-	margin-left: 41px;
-	padding: 0;
-	list-style: none;
-	overflow: hidden;
-	color: var(--primary);
-	width: min-content;
-}
 
-.nav-menu > ul > li:hover {
-	color: var(--tertiary);
-	cursor: pointer;
-}
-
-.nav-menu > ul > li:active {
-	color: var(--primary);
-	transform: scale(0.9)
-}
 
 .right-menu {
 	position: relative;
@@ -599,7 +580,7 @@ footer > section > div > p, footer > section > p{
 	overflow: hidden;
 	overflow-y: scroll;
 	align-items: center;
-	background-color: var(--secondary);
+	background-color: var(--quaternary);
 }
 
 .grid-item {
@@ -644,4 +625,34 @@ footer > section > div > p, footer > section > p{
 
 .p_description {
 	min-width: 200px;
+}
+
+.navbar-menu {
+	display: flex;
+}
+
+.navbar-menu > ul {
+	margin: 5px;
+	font-size: 1.5em;
+	margin-left: 26px;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	color: var(--primary);
+	width: min-content;
+}
+
+.navbar-menu > ul > li:hover {
+	color: var(--tertiary);
+	cursor: pointer;
+}
+
+.navbar-menu > ul > li:active {
+	color: var(--primary);
+	transform: scale(0.9)
+}
+
+.ul-menu-2, .ul-menu-3 {
+	display: flex;
+	flex-direction: column;
 }
