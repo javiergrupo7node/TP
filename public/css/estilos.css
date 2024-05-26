@@ -605,6 +605,7 @@ footer > section > div > p, footer > section > p{
 .grid-item {
 	width: 100%;
 	display: flex;
+	justify-content: space-between;
 }
 
 .box_1_menu {
@@ -638,6 +639,7 @@ footer > section > div > p, footer > section > p{
 	flex-direction: column;
 	color: var(--primary);
 	font-size: 0.8em;
+
 }
 
 .p_description {
