@@ -170,35 +170,29 @@ let navbarMenuCreator = (navbarMenu, obj) => {
 
 const remover = (...els) => { els.forEach((el) => {while (el.firstChild) el.firstChild.remove()}); }
 
-Object.keys(menu).forEach((menus) => {
+let populator = (obj, ulMenu) => {
+    if (!obj instanceof Object && typeof obj !== 'string') return;
 
+    if (Array.isArray(obj)) {
+        obj.forEach((item) => {
+            remover(gridContainer);
+            gridItemCreator(item);
+        });
+        return;
+    };
+    remover(ulMenu3);
+    Object.keys(obj).forEach((item) => { 
+        navbarMenuCreator(ulMenu, item);
+        let itemEl = document.querySelector(`#${item}`);
+        itemEl.addEventListener("click", () => { populator(obj[`${item}`], ulMenu3); });
+    });
+};
+
+Object.keys(menu).forEach((menus) => {
     navbarMenuCreator(ulMenu1, menus);
     let menuItemEl = document.querySelector(`#${menus}`);
     menuItemEl.addEventListener("click", () => {
-
         remover(gridContainer, ulMenu2, ulMenu3);
-
-        Object.keys(menu[`${menus}`]).forEach((m) => {
-            navbarMenuCreator(ulMenu2, m);
-            let mItemEl = document.querySelector(`#${m}`);
-            mItemEl.addEventListener("click", () => {
-
-                remover(ulMenu3);
-
-                Object.keys(menu[`${menus}`][`${m}`]).forEach((mItem) => {
-
-                    navbarMenuCreator(ulMenu3, mItem);
-                    let mmItemEl = document.querySelector(`#${mItem}`);
-                    mmItemEl.addEventListener("click", () => {
-
-                        menu[`${menus}`][`${m}`][`${mItem}`].forEach((item) => {
-                            
-                            remover(gridContainer);
-                            gridItemCreator(item);
-                        });
-                    });
-                });
-            });
-        });
+        populator(menu[`${menus}`], ulMenu2);
     });
 });
